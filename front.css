@@ -32,9 +32,7 @@ input{
     display: none;
 }
 label{
-    display:flex;
-    flex-direction: column;
-    justify-content: space-between;
+    position:relative;
     width:75px;
     height:75px;
     background: #747171;
@@ -43,12 +41,39 @@ label{
     font-size:5rem;
     user-select:none;
     cursor:pointer;
+    gap:1rem;
 }
 .hamlines{
+    margin-left:1.2rem;
+    position:absolute;
+    top:50%;
+    left:0;
+    width:40px;
     height: 4px;
     background-color: black;
     border-radius: 2px;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease-in-out;
+    transform-origin: center;
+}
+/*SKAPAR DE TRE LINJERNA OCH X I MENYN*/
+#hamline1 {
+    transform: translateY(-12px); 
+}
+#hamline2 { 
+    transform: translateY(0); 
+}
+#hamline3 { 
+    transform: translateY(12px); 
+}
+
+#meny:checked + label #hamline1{
+    transform: rotate(45deg) translateY(0);
+}
+#meny:checked + label #hamline2{
+    opacity: 0;
+}
+#meny:checked + label #hamline3{
+    transform: rotate(-45deg) translateY(0);
 }
 .ham-meny{
     display:none;
@@ -58,13 +83,16 @@ label{
     text-decoration: none;
 }
 input[type="checkbox"]:checked + label + .ham-meny{
-    background: #747171;
+    background: #e5e5e5;
     position: absolute;
     top:5rem;
     right:1rem;
     padding:1rem;
     border-radius:1rem;
+    width:15rem;
+    height:20rem;
     display: block;
+    
 }
 /*Introbild*/
 #intro{
