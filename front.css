@@ -13,6 +13,9 @@ body{
     font-family: sans-serif;
     display:flex;
     flex-direction: column;
+    perspective: 1px;
+    transform-style: preserve-3d;
+    overflow-x: hidden;
 }
 header{
     height:5rem;
@@ -24,7 +27,15 @@ header{
     padding:1rem;
     position: sticky;
     z-index: 1000;
-    top:0
+    top:0;
+    box-shadow: 2px 2px 6px #0000009e
+}
+section{
+    transform-style: inherit;
+    box-shadow: 10px 10px 10px #000000;
+}
+section:nth-child(even){
+    transform: translateZ(-1px) scale(2.1);
 }
 .filler{
     flex:5;
@@ -103,8 +114,8 @@ input[type="checkbox"]:checked + label + .ham-meny{
     background: url(https://ollesab.mockelngymnasiet.com/res/cnc.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center 60%;
-    height:40dvh;
+    background-position: 0 -200px;
+    height:694px;
     flex:1;
     display:flex;
     flex-direction: column;
@@ -116,11 +127,19 @@ input[type="checkbox"]:checked + label + .ham-meny{
 }
 
 #text1{
-    margin-left:10rem;
-    margin-right:10rem;
-    margin-top:4rem;
+    padding:8rem;
+    background: url(https://ollesab.mockelngymnasiet.com/res/platetary-gears-34gbykve9bv1m3jps72b0wrkbnrcs0ksn9i3ehs408pe2gi74.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:800px;
+    box-shadow: 2px 2px 6px #0000009e;
+}
+#text1 article{
+    width:30%;
+    border-radius:1rem;
+    background: #c1c1c1b9;
     padding:1rem;
-    /*background: #d6d6d6;*/
+    border: 2px solid #000;
 }
 /*BILDSPEL*/
 #text2{
@@ -129,7 +148,7 @@ input[type="checkbox"]:checked + label + .ham-meny{
     align-items: center;
     padding: 5rem;
     background: #ebebeb;
-    margin-top:4rem;
+    --margin-top:4rem;
 }
 .slider{
     position:relative;
@@ -158,11 +177,19 @@ input[type="checkbox"]:checked + label + .ham-meny{
   100% { opacity: 0; }
 }
 #text3{
-    margin-left:10rem;
-    margin-right:10rem;
-    margin-top:4rem;
+    padding:8rem;
+    background: url(https://images.stockcake.com/public/a/c/f/acf83e69-3e39-41b9-a833-e204720c0f31_large/global-network-connectivity-stockcake.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:800px;
+    box-shadow: 2px 2px 6px #0000009e;
+}
+#text3 article{
+    background: #c1c1c1b9;
+    border-radius: 1rem;
     padding:1rem;
-    margin-bottom:4rem;
+    width:30%;
+    border: 2px solid #000;
 }
 .Contact{
     background: #000;
